@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='posts-workshop'>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <title>Posts Workshop</title>
   </head>
-  <body>
+  <body ng-controller='ApplicationController'>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -62,7 +62,10 @@
       </div><!-- /.container-fluid -->
     </nav>
     <p>
-      {{ 1 + 2 }}
+      <ng-include
+        src="./partials/posts.html">
+      </ng-include>
     </p>
+    <script src='./javascripts/app.js'></script>
   </body>
 </html>
